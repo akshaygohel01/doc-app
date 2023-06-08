@@ -15,15 +15,23 @@ body {
 }
 
 .container {
+  padding: 20px;
   width: 70vw;
+  max-width: 700px;
   height: 70vh;
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-areas: "login";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  justify-content: center;
   box-shadow: 0 0 17px 10px rgb(0 0 0 / 30%);
   border-radius: 20px;
   background: white;
   overflow: hidden;
+}
+
+.some h2{
+  color: #f94081;
 }
 
 .form-content {
@@ -36,11 +44,25 @@ body {
 
 .design {
   grid-area: design;
-  display: none;
+  /* display: none; */
   position: relative;
 }
 
-.design .content {
+.some {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.some img {
+  width: 60px;
+  height: 60px;
+  padding: 0px;
+  margin: 0px;
+}
+
+
+.design h6 {
   display: flex;
   font-family: "Barlow", sans-serif;
   font-family: "Geologica", sans-serif;
@@ -49,7 +71,9 @@ body {
   font-family: "Satisfy", cursive;
   justify-content: center;
   align-items: center;
+  display: none;
 }
+
 .frm-itm {
   margin: 0px;
 }
@@ -58,7 +82,6 @@ body {
   /* grid-area: login; */
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   margin: auto;
   width: 300px;
@@ -121,33 +144,28 @@ a.forgot {
   margin-top: 15px;
 }
 
-.create {
-  display: flex;
-  align-items: center;
-  position: absolute;
-  bottom: 20px;
+.login form {
+  padding-left: 20px;
+}
+
+h3.text-center {
+  text-align: left !important;
+  color: #a414f7;
 }
 
 @media (min-width: 768px) {
   .container {
-    grid-template-columns: 50% 50%;
-    grid-template-areas: "design login";
+    flex-direction: row;
   }
 
-  .design {
-    display: block;
-  }
-}
-
-/* .form-container{
+  .design h6 {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+  }
 }
 
-.register-form{
-    border: 1px solid black;
-    padding: 30px;
-
-} */
+@media screen and (max-width:768px) {
+  .register{
+    width: 250px;
+    margin-left: 10%;
+  }
+}

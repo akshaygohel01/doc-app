@@ -1,6 +1,7 @@
 const doctorModel = require("../models/doctor");
 const userModel = require("../models/user");
 
+//GET ALL USER
 const getAllUsersController = async(req,res)=>{
     try{
         const users = await userModel.find({});
@@ -20,6 +21,8 @@ const getAllUsersController = async(req,res)=>{
     }
 }
 
+
+//GET ALL DOCTOR
 const getAllDoctorsController = async(req,res)=>{
     try{
         const doctors = await doctorModel.find({});
@@ -38,6 +41,7 @@ const getAllDoctorsController = async(req,res)=>{
         })
     }
 }
+
 
 //DOCTOR ACCOUNT STATUS
 const changeAccountStatusController = async(req,res)=>{
@@ -69,9 +73,6 @@ const changeAccountStatusController = async(req,res)=>{
         })
     }
 }
-
-// const getAllDoctorsController = ()=>{}
-// const getAllUsersController = ()=>{}
 
 module.exports = {
   getAllDoctorsController,

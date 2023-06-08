@@ -128,7 +128,7 @@ const ApplyDoctor = () => {
           </Col>
           <Col xs={24} md={24} lg={8}>
             <Form.Item
-              label="Experience"
+              label="Experience(In Years)"
               name="experience"
               required
               rules={[{ required: true }]}

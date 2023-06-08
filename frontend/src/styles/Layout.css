@@ -32,29 +32,6 @@
     scale: 1.6;
 }
 
-@media screen and (max-width:800px) {
-
-    .hidebar {
-        display: none;
-    }
-
-    .ham-menu {
-        display: block;
-    }
-
-    .hidebar .ham-menu {
-        color: white;
-    }
-
-    .sidebar {
-        position: fixed;
-        z-index: 2;
-        top: 0px;
-        left: -10px;
-        border-radius: 0px;
-        height: 100vh;
-    }
-}
 
 .content {
     width: 100%;
@@ -135,4 +112,32 @@
     font-size: 1.2rem;
     margin: 0 10px;
     text-transform: uppercase;
+}
+
+.bell{
+    gap: 0;
+}
+
+@media screen and (max-width:800px) {
+
+    .hidebar {
+        display: none;
+    }
+
+    .ham-menu {
+        display: block;
+    }
+
+    .hidebar .ham-menu {
+        color: white;
+    }
+
+    .sidebar {
+        position: fixed;
+        z-index: 2;
+        top: 0px;
+        left: -10px;
+        border-radius: 0px;
+        height: 100vh;
+    }
 }

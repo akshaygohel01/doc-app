@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { showLoading, hideLoading } from "../redux/features/alertSlice";
 import axios from "axios";
 import { DatePicker, TimePicker, message } from "antd";
-import moment from "moment";
 import dayjs from "dayjs";
 
 const BookingPage = () => {

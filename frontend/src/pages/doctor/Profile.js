@@ -5,7 +5,6 @@ import { useNavigate, useParams } from "react-router-dom";
 import { Col, Form, Input, Row, TimePicker, message } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import { showLoading, hideLoading } from "../../redux/features/alertSlice";
-import moment from "moment";
 import dayjs from "dayjs";
 
 const Profile = () => {
@@ -93,10 +92,6 @@ const Profile = () => {
             className="m-3"
             initialValues={{
               ...doctor,
-              // timings: [
-              //   moment(doctor.timings[0],"HH:mm"),
-              //   moment(doctor.timings[1],"HH:mm"),
-              // ],
             }}
           >
             <h4>Personal Details:</h4>
@@ -171,7 +166,7 @@ const Profile = () => {
               </Col>
               <Col xs={24} md={24} lg={8}>
                 <Form.Item
-                  label="Experience"
+                  label="Experience(Years)"
                   name="experience"
                   required
                   rules={[{ required: true }]}

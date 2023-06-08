@@ -37,20 +37,6 @@ const Layout = ({ children }) => {
     },
   ]
 
-
-
-  //Rendering menu list
-  // const SidebarMenu = user.isAdmin ? AdminMenu : user.isDoctor ? doctorMenu : UserMenu;
-  // const SidebarMenu = user?.isAdmin
-  //   ? AdminMenu
-  //   : user?.isDoctor
-  //   ? doctorMenu
-  //   : UserMenu;
-  // console.log(user);
-  // if(user){
-  //   user.isDoctor = true
-  // }
-
   let SidebarMenu;
   if (user.isAdmin) {
     SidebarMenu = AdminMenu;
@@ -106,9 +92,9 @@ const Layout = ({ children }) => {
                   onClick={() => {
                     navigate("/notification");
                   }}
-
+                  
                 >
-                  <i class="fa-solid fa-bell"></i>
+                  <i className="fa-solid fa-bell"></i>
                 </Badge>
                 <Link to="/profile">{user.name}</Link>
               </div>
