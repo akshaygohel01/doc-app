@@ -26,7 +26,7 @@ app.use("/api/doctor",require("./routes/doctorRoute"));
 //static files
 app.use(express.static(path.join(__dirname,'frontend','build')))
 
-app.get('*',async(req,res)=>{
+app.use('*',async(req,res)=>{
     res.sendFile(path.join(__dirname,"frontend","build","index.html"));
 })
 
