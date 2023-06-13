@@ -24,10 +24,10 @@ app.use("/api/admin",require("./routes/adminRoute"));
 app.use("/api/doctor",require("./routes/doctorRoute"));
 
 //static files
-app.use(express.static(path.join(__dirname,'frontend','build')))
+app.use(express.static(path.join(__dirname,"..",'frontend','build')))
 
 app.use('*',async(req,res)=>{
-    res.sendFile(path.join(__dirname,"frontend","build","index.html"));
+    res.sendFile(path.join(__dirname,'..',"frontend","build","index.html"));
 })
 
 //listening to the port 
